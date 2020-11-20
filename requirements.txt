@@ -15,4 +15,4 @@ seaborn==0.10.0
 cloudpickle>=0.6.0
 scikit-learn==0.23.2
 joblib==0.14.1
-pickleshare=0.7.5
+pickleshare==0.7.5
