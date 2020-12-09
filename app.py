@@ -24,7 +24,7 @@ model = pickle.load(open('./model.sav','rb'))
 
 print('Params :',model.get_params())
 print('Feat  Imp :',model.feature_importances_)
-fitted_lambda= 0.03608400474708946
+fitted_lambda= -0.3290899304145554
 
     
 @app.route('/')
