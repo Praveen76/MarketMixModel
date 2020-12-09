@@ -46,7 +46,6 @@ def predict():
                         'TV_Exp'  :int_features[5],
                         'Radio_Exp':int_features[6],
                         'Other_Exp':int_features[7] }])
-    print('CWD :',os.getcwd())
     prediction = model.predict(test)
     predTrans=inv_boxcox(prediction,fitted_lambda)
     predTrans=np.round(predTrans,2)
