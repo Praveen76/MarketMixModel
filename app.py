@@ -26,6 +26,8 @@ print('Params :',model.get_params())
 print('Feat  Imp :',model.feature_importances_)
 fitted_lambda= -0.3290899304145554
 
+def place_value(number): 
+    return ("{:,}".format(number)) 
     
 @app.route('/')
 def home():
@@ -48,7 +50,7 @@ def predict():
                         'Other_Exp':int_features[7] }])
     prediction = model.predict(test)
     predTrans=inv_boxcox(prediction,fitted_lambda)
-    predTrans=np.round(predTrans,2)
+    predTrans=place_value(int(predTrans))
     return render_template('home.html', prediction_text="Predicted funded loan amount : $ {}".format((predTrans)))
 
 @app.route('/predict_api',methods=['POST'])
