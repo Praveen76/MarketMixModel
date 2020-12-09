@@ -14,26 +14,23 @@
 
 <body>
  <div class="login">
-	<h1>Market Mix Modelling</h1>
+	<h1>Market Mix Modeling</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
 
-        <input type="text" name="interview_score0" placeholder="Forecasted Internet Leads" required="required" /><br>
-        <input type="text" name="interview_score1" placeholder="Forecasted TV Leads" required="required" /><br>
-        <input type="text" name="interview_score2" placeholder="Forecasted Radio Leads" required="required" /><br>
-        <input type="text" name="interview_score3" placeholder="Forecasted Other Leads" required="required" /><br>
-        <input type="text" name="interview_score4" placeholder="Internet Campaign Budget" required="required" /><br>
-        <input type="text" name="interview_score5" placeholder="TV Campaign Budget" required="required" /><br>
-        <input type="text" name="interview_score6" placeholder="Radio Campaign Budget" required="required" /><br>
-        <input type="text" name="interview_score7" placeholder="Other Campaign Budget" required="required" /><br>
-
+        <input type="text" name="interview_score0" placeholder="Internet Leads" required="required" /><br>
+        <input type="text" name="interview_score1" placeholder="TV Leads" required="required" /><br>
+        <input type="text" name="interview_score2" placeholder="Radio Leads" required="required" /><br>
+        <input type="text" name="interview_score3" placeholder="Other Leads" required="required" /><br>
+        <input type="text" name="interview_score4" placeholder="Internet Campaign expenditure" required="required" /><br>
+        <input type="text" name="interview_score5" placeholder="TV Campaign expenditure" required="required" /><br>
+        <input type="text" name="interview_score6" placeholder="Radio Campaign expenditure" required="required" /><br>
+        <input type="text" name="interview_score7" placeholder="Other Campaign expenditure" required="required" /><br>
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
-   <br>
-   <br>
-  
+   <br> 
    
  </div>
  {{prediction_text}}
